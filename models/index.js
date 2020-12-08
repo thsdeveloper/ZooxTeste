@@ -7,5 +7,6 @@ const db = {};
 db.mongoose = mongoose;
 db.url = dbConfig.url;
 db.estados = require("./estado.model")(mongoose);
+db.cidades = require("./cidade.model")(mongoose);
 
 module.exports = db;

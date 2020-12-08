@@ -26,6 +26,7 @@ db.mongoose.connect(db.url, {useNewUrlParser: true, useUnifiedTopology: true}).t
 
 
 //inclui as rotas de estado
+require("./routes/cidade.routes")(app);
 require("./routes/estado.routes")(app);
 
 

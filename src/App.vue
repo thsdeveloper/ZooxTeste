@@ -31,7 +31,6 @@
 
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
       <router-link to="/estados">Estados</router-link> |
       <router-link to="/cidades">Cidades</router-link>
     </div>
@@ -46,7 +45,6 @@ export default {
       ['mdi-home', 'Home', '/'],
       ['mdi-format-list-bulleted-square', 'Estados', 'estados'],
       ['mdi-city-variant', 'Cidades', 'cidades'],
-      ['mdi-information', 'Sobre o teste', 'about'],
     ],
   }),
 }

@@ -78,7 +78,6 @@ export default {
       nome: "",
       headers: [
         {text: "Nome do cidade", align: "start", sortable: true, value: "nome"},
-        {text: "Abreviação", align: "start", sortable: true, value: "abreviacao"},
         {text: "Data de Criação", sortable: true, value: "createdAt"},
         {text: "Data de Alteração", value: "updatedAt", sortable: true},
         {text: "Ação", value: "actions", sortable: false},
@@ -149,7 +148,6 @@ export default {
       return {
         _id: cidade._id,
         nome: cidade.nome.length > 30 ? cidade.nome.substr(0, 30) + "..." : cidade.nome,
-        abreviacao: cidade.abreviacao.length > 30 ? cidade.abreviacao.substr(0, 30) + "..." : cidade.abreviacao,
         createdAt: cidade.createdAt,
         updatedAt: cidade.updatedAt,
       };

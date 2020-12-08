@@ -9,11 +9,11 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          Teste ZooxSmartData
+          Olá, bem vindo ao Teste ZooxSmartData
         </h1>
 
         <p class="subheading font-weight-regular">
-          Olá, meu nome é <strong>Thiago Pereira</strong>. Seja bem vindo ao teste de nivelamento da empresa ZooxSmartData.
+          Meu nome é <strong>Thiago Pereira</strong>. Seja bem vindo ao teste de nivelamento da empresa ZooxSmartData.
           Meu maior obejtivo é ter fornecido neste projeto soluções para que eu possa integrar a equipe de desenvolvedores
           da ZooxSmartData.
           <a href="https://github.com/thsdeveloper?tab=repositories" target="_blank">Meu Repositório no GitHub</a>
@@ -32,47 +32,23 @@
         </v-row>
       </v-col>
 
-      <v-col
-          class="mb-5"
-          cols="12"
-      >
+      <v-col  no-gutters>
         <h2 class="headline font-weight-bold mb-3">
           Como subir o ambiente?
         </h2>
 
         <v-row justify="center">
-          <a
-              v-for="(link, i) in importantLinks"
-              :key="i"
-              :href="link.href"
-              class="subheading mx-3"
-              target="_blank"
-          >
-            {{ link.text }}
-          </a>
+          <p>Execute no seu terminal os comando abaixo para subir o ambiente de desenvolvimento NodeJs.</p>
         </v-row>
-      </v-col>
-
-      <v-col
-          class="mb-5"
-          cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Ecosystem
-        </h2>
-
         <v-row justify="center">
-          <a
-              v-for="(eco, i) in ecosystem"
-              :key="i"
-              :href="eco.href"
-              class="subheading mx-3"
-              target="_blank"
-          >
-            {{ eco.text }}
-          </a>
+           <code>node server.js</code>
+        </v-row>
+         <v-row justify="center">
+           <code>npm run serve</code>
         </v-row>
       </v-col>
+
+      
     </v-row>
   </v-container>
 </template>
@@ -120,16 +96,36 @@ export default {
     ],
     whatsNext: [
       {
-        text: 'Explore components',
-        href: 'https://vuetifyjs.com/components/api-explorer',
+        text: 'Vuetfy',
+        href: 'https://vuetifyjs.com/en/',
       },
       {
-        text: 'Select a layout',
-        href: 'https://vuetifyjs.com/getting-started/pre-made-layouts',
+        text: 'VueRouter',
+        href: 'https://router.vuejs.org/',
       },
       {
-        text: 'Frequently Asked Questions',
-        href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
+        text: 'Vue Axios',
+        href: 'https://br.vuejs.org/v2/cookbook/using-axios-to-consume-apis.html',
+      },
+      {
+        text: 'vue-sweetalert2',
+        href: 'https://github.com/avil13/vue-sweetalert2',
+      },
+      {
+        text: 'MongooseJs',
+        href: 'https://mongoosejs.com/',
+      },
+      {
+        text: 'Body-parser',
+        href: 'https://www.npmjs.com/package/body-parser',
+      },
+       {
+        text: 'Node ExpressJs',
+        href: 'https://expressjs.com/pt-br/',
+      },
+      {
+        text: 'Momentjs',
+        href: 'https://momentjs.com/',
       },
     ],
   }),

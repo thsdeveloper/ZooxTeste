@@ -4,20 +4,22 @@ const Cidade = db.cidades;
 // Cria e salva um novo cidade
 exports.create = (req, res) => {
 
+    console.log(req.body)
+
     //Valida o request
     if (!req.body.nome) {
         res.status(400).send({message: "O campo nome não pode estar vazio!"});
         return;
     }
-    if (!req.body.abreviacao){
-        res.status(400).send({message: "O campo abreviação não pode estar vazio!"});
+    if (!req.body.estadoId){
+        res.status(400).send({message: "O campo estado não pode estar vazio!"});
         return;
     }
 
     //Cria um novo cidade
     const cidade = new Cidade({
         nome: req.body.nome,
-        abreviacao: req.body.abreviacao,
+        estadoId: req.body.estadoId,
     });
 
     // Salva o cidade no banco de dados

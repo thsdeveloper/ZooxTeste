@@ -12,8 +12,8 @@
                 <div v-if="!submitted">
                   <v-text-field v-model="cidade.nome" :rules="nomeCidadeRules" :counter="100" label="Nome da cidade"
                                 required></v-text-field>
-                  <v-select v-model="cidade.estadoId" :items="estados" label="Escolha o estado" item-value="nome"
-                            no-data-text="Nenhuma cidade encontrada"></v-select>,{{estados}}
+                  <v-select v-model="cidade.estadoId" :items="estados" :rules="estadoRules" label="Escolha o estado" item-value="_id" item-text="nome"
+                            no-data-text="Nenhuma cidade encontrada"></v-select>
                 </div>
 
                 <div v-else>
@@ -59,8 +59,8 @@ export default {
         v => !!v || 'Campo obrigatório!',
         v => v.length <= 100 || 'Este campo só pode conter 100 caracteres',
       ],
-      abreviacaoRules: [
-        v => v.length <= 2 || 'Este campo só pode conter 2 caracteres',
+      estadoRules: [
+       v => !!v || 'Campo obrigatório!',
       ],
       cidade: {
         _id: null,
@@ -78,7 +78,7 @@ export default {
       if (this.$refs.form.validate()) {
         var data = {
           nome: this.cidade.nome,
-          abreviacao: this.cidade.abreviacao
+          estadoId: this.cidade.estadoId
         };
         CidadeService.create(data).then(response => {
           this.submitted = true;
